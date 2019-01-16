@@ -15,9 +15,20 @@ sudo chmod +x path/name_of_the_script.sh
 Configuration
 ------------
 
-Before start using *slacktee*, please set following variables in the script configuration file.
-*slacktee* reads the global configuration (/etc/slacktee.conf) first, then reads your local configuration (~/.slacktee).
-You can set up your local configuration file using interactive setup mode (--setup option).
+Open the genericnotify.sh
+```
+vim genericnotify.sh
+```
+
+Configure the variables
+```
+CHANNEL=""  # Default channel to post messages. Remember to use #.
+USERNAME="" # Default username to post messages
+EMOJI=""    # Default emoji to post messages
+MSG=$1      # Input from the terminal
+COLOR=$2    # Can either be one of 'good', 'warning', 'danger', or any hex color code 
+HOOK=""     # Incoming Webhooks integration URL. See https://my.slack.com/services/new/incoming-webhook
+```
 
 Usage
 ------------
